@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './cube-alt-1-svgrepo-com.svg';
 import './App.css';
 
 function App() {
