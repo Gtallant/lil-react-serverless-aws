@@ -1,23 +1,26 @@
-import logo from './cube-alt-1-svgrepo-com.svg';
-import './App.css';
+import Hero from './components/Hero';
+import { ThemeProvider } from '@mui/material/styles';
+import Theme from './assets/theme';
+import Experience from './components/Experience';
+import CssBaseline from '@mui/material/CssBaseline';
+import Certifications from './components/Certifications';
+import Education from './components/Education';
+import Skills from './components/Skills';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React in less than a day!
-        </a>
-      </header>
+      <ThemeProvider theme={Theme}>
+          <CssBaseline />
+          <Hero />
+          <Experience />
+          <Skills />
+          <Certifications />
+          <Education />
+          <Footer />
+      </ThemeProvider>
     </div>
   );
 }
