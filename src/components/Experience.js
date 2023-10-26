@@ -67,7 +67,7 @@ export default function Experience() {
         <Typography variant="h2" sx={{ textAlign: 'center'}}>
           {content.title}
         </Typography>
-        {content.companies.map(company => <Company key={company.title} companyData={company} />)}
+        {content.companies.map((company, index) => <Company key={company.title} companyData={company} />)}
       </Container>
     </Box>
   );

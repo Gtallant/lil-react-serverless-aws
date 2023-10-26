@@ -30,7 +30,7 @@ export default function Certifications() {
         </Typography>
         <Paper sx={{ mt: 2 }}>
           { content.certifications.map(certification => (
-            <>
+            <Box key={certification.title}>
               <Box  sx={{ display: 'flex', justifyContent: 'space-between', px: 2, pt: 2 }}>
                 <Typography variant="h4">
                   {certification.title}
@@ -43,7 +43,7 @@ export default function Certifications() {
                   {certification.subtitle}
                 </Typography>
               <Divider />
-            </>
+            </Box>
           ))}
         </Paper>
       </Container>

@@ -19,7 +19,7 @@ export default function Company({ companyData }) {
       </Typography>
       <Divider />
       {positions.map(position => (
-        <>
+        <div key={position.title}>
           <Box  sx={{ display: 'flex', justifyContent: 'space-between', px: 2, pt: 2 }}>
             <Typography variant="h4">
               {position.title}
@@ -30,13 +30,13 @@ export default function Company({ companyData }) {
           </Box>
           <List>
             {position.details.map(text => (
-              <ListItem sx={{ alignItems: 'flex-start' }}>
+              <ListItem key={text} sx={{ alignItems: 'flex-start' }}>
                 <ListItemIcon><ArrowRightIcon sx={{ minHeight: '24px' }} /></ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
           </List>
-        </>
+        </div>
       ))}
     </Paper>
   );

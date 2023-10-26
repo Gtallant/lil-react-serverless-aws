@@ -16,7 +16,7 @@ export default function Skills() {
   const titleColor = theme.palette.getContrastText(sectionBackground);
   const badgeTextColor = theme.palette.getContrastText(badgeBackground);
 
-  const skillsList = 'Javascript/HTML5/CSS, SASS/LESS, React/Redux, CSS-in-JS, NodeJS, GraphQL, Express, Webpack, Jest, Enzyme, DynamoDB, AWS Lambda, Git, Agile, Scrum, StorybookJS, GraphQL, REST APIs, JSON, Typescript, Salesforce LWC, GatsbyJS, Handlebars, Jquery, iBeacons, Ionic, Cloud Computing';
+  const skillsList = 'Javascript/HTML5/CSS, SASS/LESS, React/Redux, CSS-in-JS, NodeJS, GraphQL, Express, Webpack, Jest, Enzyme, DynamoDB, AWS Lambda, Git, Agile, Scrum, StorybookJS, REST APIs, JSON, Typescript, Salesforce LWC, GatsbyJS, Handlebars, Jquery, iBeacons, Ionic, Cloud Computing';
 
   return (
     <Box sx={{ bgcolor: sectionBackground, py: 4 }}>
@@ -25,7 +25,7 @@ export default function Skills() {
           Skills
         </Typography>
         <Stack direction="row" flexWrap="wrap" spacing={1}>
-          {skillsList.split(', ').map(skill => <Chip sx={{ typography: 'button', color: badgeTextColor, bgcolor: badgeBackground, letterSpacing: 1.25 }} label={skill} />)}
+          {skillsList.split(', ').map(skill => <Chip key={skill} sx={{ typography: 'button', color: badgeTextColor, bgcolor: badgeBackground, letterSpacing: 1.25 }} label={skill} />)}
         </Stack>
       </Container>
     </Box>

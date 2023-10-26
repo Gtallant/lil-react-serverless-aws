@@ -47,7 +47,7 @@ export default function Footer() {
   };
 
   const getListItemContent = item => (
-    <ListItem>
+    <ListItem key={item.title}>
       {item.url ? (
         <ListItemButton href={item.url} sx={{ p: 0 }}>
           <ListItemIcon>
